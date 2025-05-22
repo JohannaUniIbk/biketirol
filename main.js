@@ -52,10 +52,14 @@ L.control.scale({
 }).addTo(map);
 
 //Etappennavigation über Pulldownmenü
+let pulldown = document.querySelector("#pulldown");
 console.log(ETAPPEN);
 for (let etappe of ETAPPEN) {
-    console.log(etappe);
-    console.log(etappe.user);
-    console.log(etappe.nr);
-    console.log(etappe.titel);
+    //console.log(etappe);
+    //console.log(etappe.user);
+    //console.log(etappe.nr);
+    //console.log(etappe.titel);
+    pulldown.innerHTML += `
+    <option value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.titel}</option>
+    `;
 }
