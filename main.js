@@ -90,3 +90,6 @@ pulldown.onchange = function (evt) {
         toggleDisplay: true,
         minimized: true,
     } ).addTo(map);
+
+// Full Screen
+ map.addControl(new L.Control.Fullscreen());
